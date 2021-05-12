@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Personal Colors</title>
+</head>
+    <body>
+        <!-- th:textはThymeleafでtextという指定、${}は変数 -->
+        <form action="/" method="post">
+        <input type="date" name="name" th:value="${value}" >
+        <input type="submit" value="Click">
+        <p th:text="${msg}">please wait...</p>
+    
+        <p th:text="本質の色："/><p th:text= "${kosei}"/>
+        <p th:text="表面の色："/><p th:text= "${hyoumen}"/> 
+        </form>
+    </body>
+</html>
