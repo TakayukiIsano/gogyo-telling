@@ -31,7 +31,7 @@ public class HelloController {
   @RequestMapping(value="/",method=RequestMethod.POST)
   //"name"でPOSTされたパラメータを取得し、それを引数に
   public ModelAndView send(@RequestParam("name")String name,ModelAndView mav) {
-	  String temp[] = name.split("-");
+	  String[] temp = name.split("-");
 	  int year = Integer.parseInt(temp[0]);
 	  int month = Integer.parseInt(temp[1]);
 	  int day = Integer.parseInt(temp[2]);
@@ -63,7 +63,7 @@ public class HelloController {
   
   private static ArrayList<String> makeParts(Day date, int year1, int month1, int day1){
 	  
-	  ArrayList<String> temp = new ArrayList<String>();
+	  ArrayList<String> temp = new ArrayList<>();
 	  String day =  SexagenaryCycle.getDay(date).toString();
 	  temp.add(day.substring(0,1));
 	  temp.add(day.substring(1,2));
