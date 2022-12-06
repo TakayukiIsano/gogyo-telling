@@ -1,6 +1,7 @@
+
 plugins {
-	id 'org.springframework.boot' version '3.0.0'
-	id 'io.spring.dependency-management' version '1.1.0'
+	id 'org.springframework.boot' version '2.4.1'
+	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
 	id 'java'
 }
 group = 'com.kodanukiware.first'
@@ -12,16 +13,11 @@ repositories {
 
 dependencies {
 	implementation fileTree(dir: 'Libs', include: ['*.jar'])
-	implementation 'org.springframework.boot:spring-boot-starter:3.0.0'
-	implementation 'org.springframework.boot:spring-boot-starter-web:3.0.0'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:3.0.0'
+	implementation 'org.springframework.boot:spring-boot-starter:2.4.1'
+	implementation 'org.springframework.boot:spring-boot-starter-web:2.4.1'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.4.1'
 }
 
 test {
 	useJUnitPlatform()
-}
-
-javaToolchains{
-	setSourceCompatibility(19)
-	setTargetCompatibility(19)
 }
