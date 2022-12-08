@@ -12,9 +12,7 @@ repositories {
 
 dependencies {
 	implementation fileTree(dir: 'Libs', include: ['*.jar'])
-	implementation platform('software.amazon.awssdk:bom:2.1.8.')
-	implementation 'software.amazon.awssdk:dynamodb'
-	implementation 'software.amazon.awssdk:kinesis'
+
 	implementation 'org.springframework.boot:spring-boot-starter:2.4.1'
 	implementation 'org.springframework.boot:spring-boot-starter-web:2.4.1'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.4.1'
