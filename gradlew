@@ -23,7 +23,7 @@
 ##############################################################################
 # Attempt to set APP_HOME
 # Resolve links: $0 may be a link
-gradlew wrapper --gradle-version 7.3.3 && gradlew wrapper
+gradlew wrapper --gradle-version 6.5 && gradlew wrapper
 
 PRG="$0"
 # Need this for relative symlinks.
