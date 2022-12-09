@@ -1,24 +1,34 @@
-plugins {
-	id 'org.springframework.boot' version '2.4.1'
-	id 'io.spring.dependency-management' version '1.0.8.RELEASE'
-	id 'java'
-}
-group = 'com.kodanukiware.first'
-version = '0.0.1-SNAPSHOT'
+buildscript {
+	dependencies {
+		classpath 'org.springframework.boot:spring-boot-gradle-plugin'
 
-repositories {
-	mavenCentral()
+	}
+}
+plugins {
+	id 'org.springframework.boot' version '3.0.0'
+	id 'io.spring.dependency-management' version '1.1.0'
+	id 'java'
 }
 
 dependencies {
-	implementation fileTree(dir: 'Libs', include: ['*.jar'])
+	fileTree(dir: 'Libs', include: ['*.jar'])
 
-	implementation 'org.springframework.boot:spring-boot-starter:2.4.1'
-	implementation 'org.springframework.boot:spring-boot-starter-web:2.4.1'
-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:2.4.1'
+	implementation('org.springframework.boot:spring-boot-starter:3.0.0')
+	implementation 'org.springframework.boot:spring-boot-starter-web:3.0.0'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf:3.0.0'
+	implementation("org.springframework.boot:spring-boot-gradle-plugin:3.0.0")
+}
+group = 'com.kodanukiware.first'
+version = '0.0.1-SNAPSHOT'
+wrapper{
+	gradleVersion('7.6')
 }
 
-test {
-	useJUnitPlatform()
+	repositories {
+		mavenCentral()
+		gradlePluginPortal()
+	}
+apply plugin: "org.springframework.boot"
+apply {
+	java
 }
-
